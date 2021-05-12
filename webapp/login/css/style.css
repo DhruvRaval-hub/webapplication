@@ -1,0 +1,87 @@
+*{
+    font-family: sans-serif;
+}
+.im{
+    background-image:url(bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(12px);
+}
+.loginbox{
+    height: 500px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: auto;
+    padding-top: 187px;
+}
+.loginbox h1{
+    display: inline-block;
+    font-size: 40px;
+    color: aliceblue;
+    border-bottom: 5px solid rgb(147, 230, 255);
+    padding-bottom: 8px;
+}
+.username{
+    border-bottom: 4px solid white;
+    margin: 23px 88px 25px 15px;
+}
+.password{
+    border-bottom: 4px solid white;
+    margin: 10px 88px 25px 15px;
+}
+a{
+    margin: -7px 60px 25px 15px;
+    color: aliceblue;
+    padding-top: 10px;
+    text-decoration: none;
+}
+.btn{
+    margin: 28px 0px 0px 158px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: aliceblue;
+    font-size: 29px;
+    border-bottom: 7px solid rgb(147, 230, 255);
+}
+.btn:hover{
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+}
+input{
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border-bottom: green;
+    margin-top: 15px;
+} 
+username{
+    height: 100px;
+    border: 2px solid black;
+}
+#line{
+    color: #fff;
+    float: right;
+    margin-right: 92px;
+    margin-top: -9px;
+}
+#line2{
+    float: right;
+    margin-left: 44px;
+    margin-right: -151px;
+    margin-top: 4px;
+}

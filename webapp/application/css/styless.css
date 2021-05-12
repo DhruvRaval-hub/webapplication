@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.all{
+    margin-left: 27px;
+}
+.im{
+    background-image:url("../css/bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(10px);
+}
+.container{
+    text-align: center;
+    color: white;
+}
+.container h1{
+    font-size: 78px;
+    margin-top: 88px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgb(187, 199, 157);
+}
+.container p{
+    font-size: 20px;
+    margin-top: 60px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 600px;
+    width: 561px;
+    border-radius: 5px; 
+    float: left;
+    margin: 124px 0px 0px 184px;
+    text-align: center;
+    overflow: hidden;
+}
+.card:hover {
+    box-shadow: 4px 8px 16px 0 rgb(255, 255, 255);
+}
+  
+  /* Add some padding inside the card container */
+.container1 {
+    padding: 2px 16px;
+    color: white;
+    overflow: hidden;
+}
+.container1 h4{
+    font-size: 40px;
+}
+.container1 p{
+    font-size: 18px;
+}
+img{
+    height: 270px;
+    width: 499px;
+    margin-left: -2px;
+    margin-top: 24px;  
+    margin-bottom: 22px; 
+    /* transition-property: width, height; */
+    transition-duration: 2s;
+    transition: all 1.5s ease;
+    /* overflow: hidden; */
+}
+img:hover{
+    /* height: 270px; */
+    /* width: 555px;
+    height: 300px; */
+    transform: scale(1.2);
+}
+.form{
+    float: left;
+    margin-top: 111px;
+    margin-left: auto;
+    margin-right: 721px;
+}
+.formbox h1{
+    color: white;
+    font-size: 57px;
+    text-shadow: 5px 5px 10px rgb(187, 199, 157);
+}
+.formbox{
+    width: 100%;
+    text-align: center;
+    margin-left: 372px; 
+    margin-top: 67px;
+}
+#inpt{
+    border: none;
+    background: none;
+    color: white;
+    margin-top: 27px;
+    font-size: 20px;
+    border-bottom: 3px solid white;
+    padding: 0px 0px 8px 6px;
+}
+.textarea{
+    height: 118px;
+    border: 3px solid white;
+    border-radius: 12px;
+}
+.btn{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 25px;
+    margin-top: 37px;
+    border-bottom: 3px solid white;
+    border-radius: 11px;
+    margin-bottom: 100px;
+    padding-top: 5px;
+}
+.btn:hover{
+    background-color: #fff;
+    padding-top: 5px;
+    color: black;
+}
+#imgs{
+    height: 202px;
+    width: 222px;
+    float: left;
+    margin: 51px 10px 12px 27px; 
+}
+.card1{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 360px;
+    width: 276px;
+    border-radius: 5px; 
+    float: left;
+    margin: 124px 0px 60px 184px;
+    text-align: center;
+}
+.card1:hover {
+    box-shadow: 4px 8px 16px 0 rgb(255, 255, 255);
+}
+.card2{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 360px;
+    width: 276px;
+    border-radius: 5px; 
+    float: left;
+    margin: 124px 0px 120px 65px;
+    text-align: center;
+}
+.card2:hover {
+    box-shadow: 4px 8px 16px 0 rgb(255, 255, 255);
+}
+#team{
+    text-align: center;
+    margin-left: 726px;
+    color: white;
+    text-shadow: 5px 5px 10px rgb(187, 199, 157);
+    margin-top: 70px;
+}

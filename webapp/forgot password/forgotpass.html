@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forgot password</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .im {
+            background-image: url(bg.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(12px);
+        }
+
+        .box {
+            height: 350px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 280px;
+        }
+
+        h3 {
+            display: inline-block;
+            font-size: 25px;
+            color: white;
+            border-bottom: 5px solid rgb(147, 230, 255);
+            padding-bottom: 13px;
+        }
+
+        input {
+            width: 93%;
+            border: none;
+            outline: none;
+            background: none;
+            color: white;
+            font-size: 23px;
+            border-bottom: 2px solid white;
+            margin: 38px 0px 52px 27px;
+            border-radius: 7px;
+        }
+
+        .btn {
+            border: none;
+            background: none;
+            border-radius: 7px;
+            border-bottom: 7px solid rgb(147, 230, 255);
+            cursor: pointer;
+            margin-left: 113px;
+            font-size: 23px;
+            padding-top: 8px;
+            padding-bottom: 5px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            padding-top: 8px;
+            padding-bottom: 5px;
+            color: black;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="im"></div>
+    <div class="box">
+        <h3>Enter your email id : </h3>
+        <br>
+        <input type="text">
+        <br>
+        <a href="../reset password/resetpass.html" class="btn">GENERATE OTP</a>
+    </div>
+</body>
+
+</html>

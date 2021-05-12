@@ -1,0 +1,112 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.text{
+    margin-top: 135px;
+}
+.im{
+    background-image:url(bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(22px);
+}
+.box{
+    height: 650px;
+    width: 650px;
+    border-top: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text hr{
+    color: rgb(147, 230, 255);
+    border: 3px solid rgb(147, 230, 255);
+}
+.text h2{
+    color: white;
+    margin-top: 14px;
+    margin-bottom: 11px;
+    margin-left: 228px;
+    font-size: 31px;
+}
+h3{
+    color: rgb(9, 198, 255);
+    font-family: Arial;
+    margin-top: 21px;
+    margin-left: 28px;
+    font-size: 24px;
+}
+input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    border-bottom: 3px solid white;
+}
+.formsignup input{
+    margin: 10px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: 41%;
+    margin-top: 33px;
+}
+#lname{
+    margin: 10px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    width: 41%;
+}
+#all{
+    margin: 10px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 11px;  
+    width: 90%  
+}
+#chckbox{
+    margin: 15px 1px 0px 16px; 
+    float: left;
+}
+p{
+    color: white;
+    float: left;
+    margin-left: 6px;
+}
+.btn{
+    margin-left: -80px;
+    font-size: 28px;
+    border-radius: 10px;
+    margin-top: 59px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: aliceblue;
+    padding-bottom: 7px;
+    border-bottom: 7px solid rgb(147, 230, 255);
+    margin-left: 259px;
+    text-decoration: none;
+}
+.btn:hover{
+    color: black;
+    background-color: #fff;
+    border-bottom: 7px solid rgb(147, 230, 255);
+    padding-top: 5px;
+}
+.last{
+    margin-top: 12px;
+}
