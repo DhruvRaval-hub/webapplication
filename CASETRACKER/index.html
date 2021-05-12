@@ -1,0 +1,369 @@
+<!-- -------------------- 1 -------------------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="route.js"></script>
+    <script>
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider.when("/login", {
+                templateUrl: "login.html"
+            })
+                .when("/about", {
+                    template: "<h1>About page</h1>"
+                })
+                .when("/contact", {
+                    template: "<h1>Contact page</h1>"
+                })
+                .otherwise({
+                    template: "<h1>Nothing page</h1>"
+                })
+        });
+    </script>
+</head>
+
+<body ng-app="app">
+    <system.webServer>
+        <handlers>
+            <remove name="BlockViewHandler" />
+            <add name="BlockViewHandler" path="*" verb="*" preCondition="integratedMode" type="System.Web.HttpNotFoundHandler" />
+            <div>
+                <ul>
+                    <li>
+                        <a href="#!login">login</a>
+                    </li>
+                    <li>
+                        <a href="#!about">About</a>
+                    </li>
+                    <li>
+                        <a href="#!contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div ng-view></div>
+</body>
+
+</html> -->
+
+<!-- -------------------- 2 -------------------- -->
+<!-- <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        AngularJs Tables Example with ng-repeat Directive
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("tablesApp", []);
+        app.controller("tablesCtrl", function ($scope) {
+            $scope.users = [{
+                name: "Madhav Sai",
+                age: 30,
+                location: 'Nagpur'
+            }, {
+                name: "Suresh Dasari",
+                age: 29,
+                location: 'Chennai'
+            }, {
+                name: "Rohini Alavala",
+                age: 29,
+                location: 'Chennai'
+            }, {
+                name: "Praveen Kumar",
+                age: 24,
+                location: 'Bangalore'
+            }];
+
+            $scope.drv = function(){
+                
+            }
+        });
+    </script>
+    <style type="text/css">
+        table,
+        tr,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+        body{
+            margin: 265px 0px 0px 718px;
+        }
+    </style>
+</head>
+
+<body ng-app="tablesApp">
+    <div ng-controller="tablesCtrl">
+        <h2>AngularJS Tables Example</h2>
+        <table>
+            <tr>
+                <td ng-click="drv()">Name</td>
+                <td>Age</td>
+                <td>Location</td>
+            </tr>
+            <tr ng-repeat="user in users | orderBy : 'age' ">
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.location}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html> -->
+
+<!-- -------------------- 3 -------------------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 7px;
+        }
+        th{
+            border: 1px solid black;
+            padding: 5px;            
+            text-align: left;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .arrow-up{
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid black;
+            display: inline-block;
+        }
+        .arrow-down{
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid black;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        var app = angular
+            .module("myModule", [])
+            .controller("myController", function ($scope) {
+                var employees = [
+                    { name: "A", dateOfBirth: new Date("November 23, 2000"), gender: "Male", salary: 55000 },
+                    { name: "B", dateOfBirth: new Date("May 05, 2003"), gender: "Female", salary: 68000 },
+                    { name: "D", dateOfBirth: new Date("August 15, 2002"), gender: "Male", salary: 57000 },
+                    { name: "C", dateOfBirth: new Date("October 27, 2004"), gender: "Female", salary: 53000 },
+                    { name: "E", dateOfBirth: new Date("December 30, 2001"), gender: "Male", salary: 60000 }
+                ];
+
+                $scope.employees = employees;
+                $scope.reverseSort = false;
+
+                $scope.sortData = function (column) {
+                    $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
+                    $scope.sortColumn = column;
+                }
+
+                $scope.getSortClass = function (column) {
+                    if ($scope.sortColumn == column) {
+                        return $scope.reverseSort ? 'arrow-down' : 'arrow-up';
+                    }
+                }
+            });
+    </script>
+</head>
+
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortData('name')">
+                        Name
+                        <div ng-class="getSortClass('name')"></div>
+                    </th>
+                    <th ng-click="sortData('dateOfBirth')">
+                        Date of Birth
+                        <div ng-class="getSortClass('dateOfBirth')"></div>
+                    </th>
+                    <th ng-click="sortData('gender')">
+                        Gender
+                        <div ng-class="getSortClass('gender')"></div>
+                    </th>
+                    <th ng-click="sortData('salary')">
+                        Salary
+                        <div ng-class="getSortClass('salary')"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | orderBy:sortColumn:reverseSort">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.dateOfBirth | date:"dd/MM/yyyy" }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html> -->
+
+<!-- -------------------- 4 -------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/myscript.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl" style="background: rgba(1, 44, 58, 0.249);">
+    <div class="container">
+        <div class="jumbotron py-3">
+            <h1 class="text-center">{{title}}</h1>
+            <p class="pt-3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque hic perferendis eum tenetur necessitatibus ipsa ab, temporanulla reiciendis illo officia minima quisquam reprehenderit quis dolorem natus? Dolore, similique? Doloribussapiente possimus nulla porro odio, ipsa consequatur temporibus culpa nostrum optio corporis assumenda corruptimolestias quae repellendus labore atque eaque ipsum commodi repellat cumque aliquam ratione unde? Cum isteid eaque unde?
+            </p>
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h3>Confirmed Cases</h3>
+                            <h3>{{all_data.confirmed.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h3>Recovered Cases</h3>
+                            <h3>{{all_data.recovered.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h3>Death Cases</h3>
+                            <h3>{{all_data.deaths.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="text" class="form-control mt-4" placeholder="Enter Country here"
+            ng-model="c" ng-change="get_c_data()">
+
+            <div class="container-fluid" ng-if="c_data">
+
+                <h1 class="text-center mt-4 text-uppercase">{{c}} status</h1>
+
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h3>Confirmed Cases</h3>
+                            <h3>{{c_data.confirmed.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h3>Recovered Cases</h3>
+                            <h3>{{c_data.recovered.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h3>Death Cases</h3>
+                            <h3>{{c_data.deaths.value}}</h3>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- -------------------- 5 -------------------- -->
+
+
+
+<<!-- !DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="route.js"></script>
+    <script>
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider.when("/login", {
+                templateUrl: "registration/registration.html"
+            })
+        });
+    </script>
+</head>
+
+<body ng-app="app">
+
+    <div>
+        <a href="#!login">Registration</a>
+    </div>
+
+    <div ng-view></div>
+
+</body>
+
+</html>
+ -->
